@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">   
+    <title>HTML Academy: Седона</title>
+</head>
+<body>    
+    <header>
+        <nav>
+            <a href="index.html"><img src="https://via.placeholder.com/500x100" width="500" height="100" alt="Логотип сайта Седона"></a>
+            <ul>
+                <li><a href="">Информация</a></li>
+                <li><a href="">Фото и видео</a></li>
+                <li><a href="">Карта штата</a></li>
+                <li><a href="catalog.html">Гостницы</a></li><!--Почему у страницы Гостиницы есть ссылка на саму себя? -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Гостиницы</h1>
+        <section>
+            <h2>Фильтры</h2>
+            <form action="#" method="GET"> <!--Почему не POST?-->
+                <fieldset>
+                    <legend>Инфраструктура</legend>
+                    <ul>  
+                        <li>
+                            <label for="filter-pool">Бассейн</label>
+                            <input type="checkbox" name="pool" id="filter-pool" checked>                        
+                        </li>                    
+                        <li>
+                            <label for="filter-parking">Парковка</label>
+                            <input type="checkbox" name="parking" id="filter-parking">
+                        </li>
+                        <li>
+                            <label for="filter-wifi">Wi - Fi</label>
+                            <input type="checkbox" name="Wi-Fi" id="filter-wifi">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Тип жилья</legend>
+                    <ul>
+                        <li>
+                            <label for="filter-hotel">Гостиница</label>
+                            <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                        </li>
+                        <li>
+                            <label for="filter-motel">Мотель</label>
+                            <input type="checkbox" name="motel" id="filter-motel" checked>
+                        </li>
+                        <li>
+                            <label for="filter-apartments">Апартаменты</label>
+                            <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>Стоимость в сутки (Р)</fieldset> <!--Бегунок не сделала, в процессе прохождения тренажеров-->
+                <button type="submit">Показать</button>
+            </form>
+        </section>
+        <section>
+            <h2>Результаты поиска</h2>
+            <p>Найдено: 3</p> <!--?Здесь надо сделать окно кол-ва?-->
+            <form action="#" method="GET">
+                <fieldset>Сортировка:
+                    <ul>
+                        <li>
+                            <input type="radio" name="sorting" id="filter-price" value="price" checked>
+                            <label for="filter-price">по цене</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sorting" id="filter-type" value="type">
+                            <label for="filter-type">по типу</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sorting" id="filter-rating" value="rating">
+                            <label for="filter-rating">по рейтингу</label>
+                        </li>      
+                    </ul>                    
+                </fieldset>
+                <button type="button">вверх</button>
+                <button type="button">вниз</button>
+            </form>
+            <ul>
+                <li>
+                    <h3>Amara Resort & Spa</h3>
+                    <img src="https://via.placeholder.com" width="150" height="100" alt="Вид гостиницы Amara Resort & Spa">
+                    <dl>
+                        <dt>Гостиницы</dt>
+                        <dd>от 4000 р.</dd>
+                    </dl>
+                    <button type="submit">Подробнее</button>    
+                    <button type="submit">Забронировать</button>
+                    <p>Рейтинг</p>                                      
+                </li>
+                <li>
+                    <h3>Desert Quail Inn</h3>
+                    <img src="https://via.placeholder.com" width="150" height="100" alt="Вид мотеля Desert Quail Inn">
+                    <dl>
+                        <dt>Мотель</dt>
+                        <dd>от 3000 р.</dd>
+                    </dl>
+                    <button type="submit">Подробнее</button>    
+                    <button type="submit">Забронировать</button>
+                    <p>Рейтинг</p>                     
+                </li>
+                <li>
+                    <h3>Villas at Poco Diablo</h3>
+                    <img src="https://via.placeholder.com" width="150" height="100" alt="Вид Villas at Poco Diablo">
+                    <dl>
+                        <dt>Апартаменты</dt>
+                        <dd>от 2000 р.</dd>
+                    </dl>
+                    <button type="submit">Подробнее</button>    
+                    <button type="submit">Забронировать</button>
+                    <p>Рейтинг</p>                    
+                </li>
+            </ul>
+        </section>
+
+
+        
+
+    </main>
+    <footer>
+        <section>
+        <h2>Контакты</h2>
+        <p>#VISITSEDONA</p>
+        <P>Тел: +7(495)666-01-66</P>
+      </section>
+      <section>
+        <h2>Социальные сети</h2>
+        <ul>
+          <li><a href="#">twitter</a></li>
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">youtube</a></li>
+        </ul>
+      </section>
+      <p>Website by
+      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      </p>        
+    </footer>
+</body>
+</html>

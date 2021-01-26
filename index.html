@@ -7,7 +7,7 @@
   <body>
     <header>
       <nav>
-        <a><img src="https://via.placeholder.com/500x100" alt="Изображение логотипа сайта Седона"></a>
+        <a><img src="https://via.placeholder.com/500x100" width="500" height="100" alt="Логотип сайта Седона"></a>
         <ul>
           <li><a href="">Информация</a></li>
           <li><a href="">Фото и видео</a></li>
@@ -25,13 +25,30 @@
         <ul>
           <li>
             <h3>Настоящий городок</h3>
-            <img src="https://via.placeholder.com/150x100" alt="Изображение фасада городка">
+            <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Изображение фасада городка">
             <p>№1</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-          </li>
+            <section>
+              <h4>Рекомендации</h4>
+              <ul>
+                <li>
+                  <p>Жильё</p>
+                  <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                </li>
+                <li>
+                  <p>Еда</p>
+                  <p>Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
+                </li>
+                <li>
+                  <p>Сувениры</p>
+                  <p>Не только китайского, но и местного производства!</p>
+                </li>
+              </ul>
+            </section>
+          </li>          
           <li>
             <h3>Там есть мост Дьявола</h3>
-            <img src="https://via.placeholder.com/150x100" alt="Изображение моста Дьявола">
+            <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Мост Дьявола">
             <p>№2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
@@ -53,51 +70,42 @@
         </ul>
       </section>
       <section>
-        <h2>Рекомендации</h2>
-            <ul>
-              <li>
-                <h3>Жильё</h3>
-                <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
-              </li>
-              <li>
-                <h3>Еда</h3>
-                <p>Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
-              </li>
-              <li>
-                <h3>Сувениры</h3>
-                <p>Не только китайского, но и местного производства!</p>
-              </li>
-            </ul>
-      </section>
-      <section>
         <h2>Поиск гостиницы в Седоне</h2>
         <p>Заинтересовались?</p>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
-        <form accept="#" method="POST">
+        <form action="#" method="POST">
           <p>
             <label>Дата заезда:
-            <input type="date" name="data" value="24 апреля 2017"> 
+            <input type="text" value="24 апреля 2017"> 
+            <!--name="arrival-data" почему в учебнике на этот пример не задается имя-->
             </label>
-          </p>
+          </p> <!-- Тег р - Сделала по примеру Лайва, а потом еще в учебнике этот код-->
           <p>
-            <label for="data-field">Дата выезда:</label>
-            <input id="data-field" type="date" name="data" value="4 июля 2017">
+            <label for="text-field">Дата выезда:</label>
+            <input id="text-field" type="text" value="4 июля 2017">
+            <!--name="departure-data" почему в учебнике на этот пример не задается имя-->
           </p>
-        <!--Пока не знаю как оформить, туплю
-          <label>Взрослые:
-            <input>
-          </label>
-          <label>Дети:
-            <input>
-          </label>-->
-          <button type="button">Найти</button>
+          <p>Взрослые:
+            <button type="button">&plus;</button>
+            <label>
+              <input type="number" name="adult-number" min="0" max="20" value="2">
+            </label>
+            <button type="button">&minus;</button>
+            Дети:
+            <button type="button">&plus;</button>
+            <label>            
+              <input type="number" name="child-number" min="0" max="20" value="0">            
+            </label>
+            <button type="button">&minus;</button>
+          </p>
+          <button type="submit">Найти</button>
         </form>
       </section>
       <section>
         <h2>Навигацонная карта</h2>
         <figure>
-          <img src="https://via.placeholder.com/500x250" alt="Карта">
+          <img src="https://via.placeholder.com/500x250" width="500" height="250" alt="Карта">
         </figure>
       </section>
     </main>
