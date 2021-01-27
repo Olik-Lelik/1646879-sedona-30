@@ -75,18 +75,16 @@
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
         <form action="#" method="POST">
-          <p>
             <label>Дата заезда:
-            <input type="text" value="24 апреля 2017"> 
-            <!--name="arrival-data" почему в учебнике на этот пример не задается имя-->
+            <input type="text" name="arrival-date" value="24 апреля 2017" > 
             </label>
-          </p> <!-- Тег р - Сделала по примеру Лайва, а потом еще в учебнике этот код-->
-          <p>
-            <label for="text-field">Дата выезда:</label>
-            <input id="text-field" type="text" value="4 июля 2017">
-            <!--name="departure-data" почему в учебнике на этот пример не задается имя-->
-          </p>
-          <p>Взрослые:
+           <!-- 3.12. Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом,
+             чтобы в будущем на неё программист мог повесить событие нажатия для открытия календаря
+              с возможностью выбора даты. - это из ТЗ проекта, поэтому оставила type="text"-->
+            <label for="date-field">Дата выезда:
+            <input type="text" name="departure-date" id="date-field" value="4 июля 2017">
+            </label>    
+          <div>Взрослые:
             <button type="button">&plus;</button>
             <label>
               <input type="number" name="adult-number" min="0" max="20" value="2">
@@ -97,8 +95,8 @@
             <label>            
               <input type="number" name="child-number" min="0" max="20" value="0">            
             </label>
-            <button type="button">&minus;</button>
-          </p>
+            <button>&minus;</button>
+          </div>
           <button type="submit">Найти</button>
         </form>
       </section>
