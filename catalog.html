@@ -20,9 +20,9 @@
         <h1>Гостиницы</h1>
         <section>
             <h2>Фильтры</h2>
-            <form action="#" method="GET">
+            <form action="https://echo.htmlacademy.ru/" method="GET">
                 <fieldset>
-                    <legend>Инфраструктура</legend>
+                    <legend>Инфраструктура:</legend>
                     <ul>  
                         <li>
                             <label for="filter-pool">Бассейн</label>
@@ -39,7 +39,7 @@
                     </ul>
                 </fieldset>
                 <fieldset>
-                    <legend>Тип жилья</legend>
+                    <legend>Тип жилья:</legend>
                     <ul>
                         <li>
                             <label for="filter-hotel">Гостиница</label>
@@ -56,17 +56,14 @@
                     </ul>
                 </fieldset>
                 <fieldset>
-                    <legend>Стоимость в сутки (Р)</legend>
-                    <label>от<input type="text" name="price-from" value="0"></label>
-                    <label>до<input type="text" name="price-to" value="3000"></label>
+                    <legend>Стоимость в сутки (Р):</legend>
+                    <label>от<input type="number" name="price-from" min="0" max="3000" value="0"></label>
+                    <label>до<input type="number" min="0" max="3000" name="price-to" value="3000"></label>
                     <div>
-                        <label for="filter-price"></label>
                         <input type="range" id="filter-price" name="cowbell">
                     </div> <!--Обернула в div, чтобы бегунок был снизу-->
                 </fieldset>
-                <button type="submit">Показать</button> <!--3.17. Фильтр: верстать с помощью формы,
-                кнопка «Показать» отвечает за отправку формы на адрес https://echo.htmlacademy.ru/   - Поэтому
-                оставила кнопку-->
+                <button type="submit">Показать</button> 
             </form>
         </section>
         <section>
@@ -77,8 +74,8 @@
             исходла из примера с логотипом на главной странице -->
             <a href="">по типу</a> 
             <a href="">по рейтингу</a>                
-            <button type="button">вверх</button>
-            <button type="button">вниз</button>
+            <a href="">вверх</a>
+            <a href="">вниз</a>
             <ul>
                 <li>
                     <h3>Amara Resort & Spa</h3>
@@ -89,8 +86,9 @@
                     </dl>
                     <a href="">Подробнее</a>    
                     <a href="">Забронировать</a>
-                    <img src="https://via.placeholder.com" width="150" height="100" alt="4 звезды">
-                    <p>Рейтинг</p>                                      
+                    <div>
+                        <p>Рейтинг</p>
+                    </div>                                      
                 </li>
                 <li>
                     <h3>Desert Quail Inn</h3>
@@ -101,8 +99,9 @@
                     </dl>
                     <a href="">Подробнее</a>    
                     <a href="">Забронировать</a>
-                    <img src="https://via.placeholder.com" width="150" height="100" alt="3 звезды">
-                    <p>Рейтинг</p>                     
+                    <div>
+                        <p>Рейтинг</p> 
+                    </div>                                        
                 </li>
                 <li>
                     <h3>Villas at Poco Diablo</h3>
@@ -113,8 +112,9 @@
                     </dl>
                     <a href="">Подробнее</a>    
                     <a href="">Забронировать</a>
-                    <img src="https://via.placeholder.com" width="150" height="100" alt="2 звезды">
-                    <p>Рейтинг</p>                    
+                    <div>
+                        <p>Рейтинг</p>
+                    </div>                                        
                 </li>
             </ul>
         </section>
