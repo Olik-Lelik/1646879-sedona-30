@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/icons/180.png" >
+    <link rel="manifest" href="manifest.webmanifest">
+    <!--Я правильно поняла, что нужно было взять любую фавиконку из Figma
+       и просто отформатировать ее до размеров 180,192 и 512?-->
   </head>
   <body>
     <header>
       <nav>
-        <a><img src="https://via.placeholder.com/500x100" width="500" height="100" alt="Логотип сайта Седона"></a>
+        <a><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седона"></a>
         <ul>
           <li><a href="">Информация</a></li>
           <li><a href="">Фото и видео</a></li>
@@ -17,15 +23,16 @@
       </nav>
     </header>
     <main>
+      <img src="img/welcom.svg" width="456,65" height="350,88" alt="SEDONA">
       <h1>Городок Седона</h1>
       <p>Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
-      <section>
+     <section>
         <h2>Преимущества Седоны</h2>
         <p>Расссмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
         <ul>
           <li>
             <h3>Настоящий городок</h3>
-            <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Изображение фасада городка">
+            <img src="img/town-Sedona.jpg" width="800" height="256" alt="Изображение фасада городка Седона">
             <p>№1</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
             <section>
@@ -48,7 +55,7 @@
           </li>          
           <li>
             <h3>Там есть мост Дьявола</h3>
-            <img src="https://via.placeholder.com/150x100" width="150" height="100" alt="Мост Дьявола">
+            <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
             <p>№2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
@@ -78,10 +85,7 @@
             <label>Дата заезда:
             <input type="text" name="arrival-date" value="" placeholder="24 апреля 2017" > 
             </label>
-           <!-- 3.12. Иконка календаря в поле ввода даты должна быть добавлена отдельным элементом,
-             чтобы в будущем на неё программист мог повесить событие нажатия для открытия календаря
-              с возможностью выбора даты. - это из ТЗ проекта, поэтому оставила type="text"-->
-            <label for="date-field">Дата выезда:
+             <label for="date-field">Дата выезда:
             <input type="text" name="departure-date" id="date-field" value="" placeholder="4 июля 2017">
             </label>    
           <div>Взрослые:
@@ -102,9 +106,7 @@
       </section>
       <section>
         <h2>Навигацонная карта</h2>
-        <figure>
-          <img src="https://via.placeholder.com/500x250" width="500" height="250" alt="Карта">
-        </figure>
+        <!--Я так поняла, что карту нужно сделать не изображением. Поэтому ничего сюда не вставляю.-->
       </section>
     </main>
     <footer>
