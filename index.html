@@ -1,130 +1,137 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"> <!--не уверна что правильно подключила шрифт
+    В примере Барбершопа в ссылке прописана кириллица и латиница. Их руками вводить надо?-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/180.png" >
     <link rel="manifest" href="manifest.webmanifest">
-    <!--Я правильно поняла, что нужно было взять любую фавиконку из Figma
-       и просто отформатировать ее до размеров 180,192 и 512?-->
   </head>
-  <body>
-    <header>
-      <nav>
-        <a><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седона"></a>
-        <ul>
-          <li><a href="">Информация</a></li>
-          <li><a href="">Фото и видео</a></li>
-          <li><a href="">Карта штата</a></li>
-          <li><a href="catalog.html">Гостницы</a></li>
+  <body class="page-body">
+    <header class="main-header">
+      <nav class="main-navigation">
+        <a class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седона"></a>
+        <ul class="list-navigation">
+          <li class="item-navigation-left"><a href="">Информация</a></li><!--по тз две ячейки центрировать слева, две справа-->
+          <li class="item-navigation-left"><a href="">Фото и видео</a></li>
+          <li class="item-navigation-right"><a href="">Карта штата</a></li>
+          <li class="item-navigation-right"><a href="catalog.html">Гостницы</a></li>
         </ul>            
       </nav>
     </header>
-    <main>
-      <img src="img/welcom.svg" width="456,65" height="350,88" alt="SEDONA">
+    <main class="container">
+      <img class="container-img" src="img/welcom.svg" width="456,65" height="350,88" alt="SEDONA">
       <h1>Городок Седона</h1>
-      <p>Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
-     <section>
+      <p class="container-slogan">Седона-небольшой городок в Аризоне, заслуживающий большего!</p>
+     <section class="features">
         <h2>Преимущества Седоны</h2>
         <p>Расссмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
-        <ul>
-          <li>
+        <ul class="list-features">
+          <li class="item-features">
             <h3>Настоящий городок</h3>
-            <img src="img/town-Sedona.jpg" width="800" height="256" alt="Изображение фасада городка Седона">
+            <img class="item-features-img" src="img/town-Sedona.jpg" width="800" height="256" alt="Изображение фасада городка Седона">
             <p>№1</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
-            <section>
+            <section class="recommendation">
               <h4>Рекомендации</h4>
-              <ul>
-                <li>
+              <ul class="list-recommendation">
+                <li class="item-recommendation">
                   <p>Жильё</p>
                   <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li>
+                <li class="item-recommendation">
                   <p>Еда</p>
                   <p>Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
                 </li>
-                <li>
+                <li class="item-recommendation">
                   <p>Сувениры</p>
                   <p>Не только китайского, но и местного производства!</p>
                 </li>
               </ul>
             </section>
           </li>          
-          <li>
+          <li class="item-features">
             <h3>Там есть мост Дьявола</h3>
-            <img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
+            <img class="item-features-img" src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
             <p>№2</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </li>
-          <li>
+          <li class="item-features">
             <h3>Небольшая площадь</h3>
             <p>№3</p>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
-          <li>
+          <li class="item-features">
             <h3>Красивая дорога </h3>
             <p>№4</p>
             <p>Ехать в Седону из Лас Вегаса совсем не скучно!</p>
           </li>
-          <li>
+          <li class="item-features">
             <h3>Мало туристов</h3>
             <p>№5</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="search">
         <h2>Поиск гостиницы в Седоне</h2>
         <p>Заинтересовались?</p>
-        <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <button type="button">Поиск гостиницы в Седоне</button>
-        <form action="#" method="POST">
+        <p class="search-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="button" type="button">Поиск гостиницы в Седоне</button>
+        <form class="search-form popup" action="#" method="POST">
+          <div class="item-search">
             <label>Дата заезда:
             <input type="text" name="arrival-date" value="" placeholder="24 апреля 2017" > 
             </label>
-             <label for="date-field">Дата выезда:
-            <input type="text" name="departure-date" id="date-field" value="" placeholder="4 июля 2017">
-            </label>    
-          <div>Взрослые:
-            <button type="button">&plus;</button>
-            <label>
-              <input type="number" name="adult-number" min="0" max="20" value="2">
-            </label>
-            <button type="button">&minus;</button>
-            Дети:
-            <button type="button">&plus;</button>
-            <label>            
-              <input type="number" name="child-number" min="0" max="20" value="0">            
-            </label>
-            <button>&minus;</button>
           </div>
-          <button type="submit">Найти</button>
+          <div class="item-search">
+            <label for="date-field">Дата выезда:
+            <input type="text" name="departure-date" id="date-field" value="" placeholder="4 июля 2017">
+            </label>
+          </div>  
+          <div class="item-search">
+            Взрослые:
+            <button class="number-button number-button-plus " type="button">&plus;</button>
+            <label>
+            <input type="number" name="adult-number" min="0" max="20" value="2">
+            </label>
+            <button class="number-button number-button-minus" type="button">&minus;</button>
+            Дети:
+            <button class="number-button number-button-plus" type="button">&plus;</button>
+            <label>            
+            <input type="number" name="child-number" min="0" max="20" value="0">            
+            </label>
+            <button class="number-button number-button-minus" type="button">&minus;</button>
+          </div>
+          <button class="button" type="submit">Найти</button>
         </form>
       </section>
-      <section>
-        <h2>Навигацонная карта</h2>
-        <!--Я так поняла, что карту нужно сделать не изображением. Поэтому ничего сюда не вставляю.-->
+      <section class="map">
+        <h2>Навигационная карта</h2>
+        <img class="map-imag" src="img/map.png" alt="Навигационная карта">
       </section>
     </main>
-    <footer>
-      <section>
+    <footer class="main-footer">
+      <section class="footer-contacts">
         <h2>Контакты</h2>
         <p>#VISITSEDONA</p>
-        <P>Тел: +7(495)666-01-66</P>
+        <P>Тел: +7(495)666-01-66</P> 
       </section>
-      <section>
+      <section class="footer-social">
         <h2>Социальные сети</h2>
         <ul>
-          <li><a href="#">twitter</a></li>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">youtube</a></li>
+          <li><a class="social-button" href="#">twitter</a></li>
+          <li><a class="social-button" href="#">facebook</a></li>
+          <li><a class="social-button" href="#">youtube</a></li>
         </ul>
       </section>
-      <p>Website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      <p class="footer-copyright">Website by
+      <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
       </p>
     </footer>
   </body>

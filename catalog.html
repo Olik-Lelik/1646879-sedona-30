@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">   
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>    
-    <header>
-        <nav>
-            <a href="index.html"><img src="https://via.placeholder.com/50x50" width="50" height="50" alt="Логотип сайта Седона"></a>
-            <ul>
-                <li><a href="">Информация</a></li>
-                <li><a href="">Фото и видео</a></li>
-                <li><a href="">Карта штата</a></li>
-                <li><a href="catalog.html">Гостницы</a></li><!--Почему у страницы Гостиницы есть ссылка на саму себя? -->
-            </ul>
-        </nav>
+<body class="page-body" >    
+    <header class="main-header">
+        <nav class="main-navigation">
+            <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седона"></a>
+            <ul class="list-navigation">
+                <li class="item-navigation-left"><a href="">Информация</a></li><!--по тз две ячейки центрировать слева, две справа-->
+                <li class="item-navigation-left"><a href="">Фото и видео</a></li>
+                <li class="item-navigation-right"><a href="">Карта штата</a></li>
+                <li class="item-navigation-right"><a href="catalog.html">Гостницы</a></li>
+            </ul>            
+      </nav>
     </header>
-    <main>
-        <h1>Гостиницы</h1>
-        <section>
+    <main class="page-search container">
+        <h1>Жильё</h1>
+        <section class="filters">
             <h2>Фильтры</h2>
-            <form action="https://echo.htmlacademy.ru/" method="GET">
+            <form class="filter" action="https://echo.htmlacademy.ru/" method="GET">
                 <fieldset>
                     <legend>Инфраструктура:</legend>
                     <ul>  
-                        <li>
+                        <li class="filter-option filter-checkbox ">
                             <label for="filter-pool">Бассейн</label>
                             <input type="checkbox" name="pool" id="filter-pool" checked>                        
                         </li>                    
-                        <li>
+                        <li class="filter-option filter-checkbox">
                             <label for="filter-parking">Парковка</label>
                             <input type="checkbox" name="parking" id="filter-parking">
                         </li>
-                        <li>
+                        <li class="filter-option filter-checkbox">
                             <label for="filter-wifi">Wi - Fi</label>
                             <input type="checkbox" name="Wi-Fi" id="filter-wifi">
                         </li>
@@ -41,15 +44,15 @@
                 <fieldset>
                     <legend>Тип жилья:</legend>
                     <ul>
-                        <li>
+                        <li class="filter-option-current filter-checkbox">
                             <label for="filter-hotel">Гостиница</label>
                             <input type="checkbox" name="hotel" id="filter-hotel" checked>
                         </li>
-                        <li>
+                        <li class="filter-option filter-checkbox">
                             <label for="filter-motel">Мотель</label>
                             <input type="checkbox" name="motel" id="filter-motel" checked>
                         </li>
-                        <li>
+                        <li class="filter-option filter-checkbox">
                             <label for="filter-apartments">Апартаменты</label>
                             <input type="checkbox" name="apartments" id="filter-apartments" checked>
                         </li>
@@ -57,85 +60,87 @@
                 </fieldset>
                 <fieldset>
                     <legend>Стоимость в сутки (Р):</legend>
-                    <label>от<input type="number" name="price-from" min="0" max="3000" value="0"></label>
-                    <label>до<input type="number" min="0" max="3000" name="price-to" value="3000"></label>
-                    <div>
+                    <div class="filter-price">
+                        <label>от<input type="number" name="price-from" min="0" max="3000" value="0"></label>
+                        <label>до<input type="number" min="0" max="3000" name="price-to" value="3000"></label>
+                    </div>
+                    <div class="filter-price filter-range">
                         <input type="range" id="filter-price" name="cowbell">
-                    </div> <!--Обернула в div, чтобы бегунок был снизу-->
+                    </div> 
                 </fieldset>
-                <button type="submit">Показать</button> 
+                <button class="button" type="submit">Показать</button> 
             </form>
         </section>
-        <section>
+        <section class="results">
             <h2>Результаты поиска</h2>
             <p>Найдено: 3</p>
             <p>Сортировка:</p>
-            <a>по цене</a> <!-- href не добавила потому что на странице сортировка по цене и он не подчеркивается,
+            <a class="breadcrumbs-current">по цене</a> <!-- href не добавила потому что на странице сортировка по цене и он не подчеркивается,
             исходла из примера с логотипом на главной странице -->
-            <a href="">по типу</a> 
-            <a href="">по рейтингу</a>                
-            <a href="">вверх</a>
-            <a href="">вниз</a>
-            <ul>
-                <li>
+            <a class="breadcrumbs" href="">по типу</a> 
+            <a class="breadcrumbs" href="">по рейтингу</a>                
+            <a class="button-up" href="">вверх</a>
+            <a class="button-down" href="">вниз</a>
+            <ul class="list-catalog">
+                <li class="item-catalog">
                     <h3>Amara Resort & Spa</h3>
-                    <img src="img/hotel Amara.jpg" width="135" height="90" alt="Вид гостиницы Amara Resort & Spa">
+                    <img class="catalog-image" src="img/hotel Amara.jpg" width="135" height="90" alt="Вид гостиницы Amara Resort & Spa">
                     <dl>
                         <dt>Гостиницы</dt>
                         <dd>от 4000 р.</dd>
                     </dl>
-                    <a href="">Подробнее</a>    
-                    <a href="">Забронировать</a>
-                    <div>
+                    <a class="button" href="">Подробнее</a>    
+                    <a class="button" href="">Забронировать</a>
+                    <div class="rating">
                         <p>Рейтинг</p>
                     </div>                                      
                 </li>
-                <li>
+                <li class="item-catalog">
                     <h3>Desert Quail Inn</h3>
-                    <img src="img/motel Desert.jpg" width="135" height="90" alt="Вид мотеля Desert Quail Inn">
+                    <img class="catalog-image" src="img/motel Desert.jpg" width="135" height="90" alt="Вид мотеля Desert Quail Inn">
                     <dl>
                         <dt>Мотель</dt>
                         <dd>от 3000 р.</dd>
                     </dl>
-                    <a href="">Подробнее</a>    
-                    <a href="">Забронировать</a>
-                    <div>
+                    <a class="button" href="">Подробнее</a>    
+                    <a class="button" href="">Забронировать</a>
+                    <div class="rating">
                         <p>Рейтинг</p> 
                     </div>                                        
                 </li>
-                <li>
+                <li class="item-catalog">
                     <h3>Villas at Poco Diablo</h3>
-                    <img src="img/apartaments Villas.jpg" width="135" height="90" alt="Вид Villas at Poco Diablo">
+                    <img class="catalog-image" src="img/apartaments Villas.jpg" width="135" height="90" alt="Вид Villas at Poco Diablo">
                     <dl>
                         <dt>Апартаменты</dt>
                         <dd>от 2000 р.</dd>
                     </dl>
-                    <a href="">Подробнее</a>    
-                    <a href="">Забронировать</a>
-                    <div>
+                    <a class="button" href="">Подробнее</a>    
+                    <a class="button" href="">Забронировать</a>
+                    <div class="rating">
                         <p>Рейтинг</p>
                     </div>                                        
                 </li>
             </ul>
         </section>
     </main>
-    <footer>
-        <section>
+    <footer class="main-footer">
+      <section class="footer-contacts">
         <h2>Контакты</h2>
         <p>#VISITSEDONA</p>
-        <P>Тел: +7(495)666-01-66</P>
+        <P>Тел: +7(495)666-01-66</P> 
       </section>
-      <section>
+      <section class="footer-social">
         <h2>Социальные сети</h2>
         <ul>
-          <li><a href="#">twitter</a></li>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">youtube</a></li>
+          <li><a class="social-button" href="#">twitter</a></li>
+          <li><a class="social-button" href="#">facebook</a></li>
+          <li><a class="social-button" href="#">youtube</a></li>
         </ul>
       </section>
-      <p>Website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-      </p>        
+      <p class="footer-copyright">Website by
+      <a class="footer-copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      </p>
     </footer>
 </body>
 </html>
