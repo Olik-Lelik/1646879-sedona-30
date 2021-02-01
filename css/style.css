@@ -1,0 +1,40 @@
+/*Fonts*/
+/*не уверена что правильно подключила fonts.googl поэтому еще здесь подключаю*/
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans.woff2) format(.woff2);
+    src: url(../fonts/PTSans.woff) format(.woff);
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans-Bold.woff2) format(.woff2);
+    src: url(../fonts/PTSans-Bold.woff) format(.woff);
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* Variables */
+
+:root {
+    --basic-black: #000000;
+    --basic-white: #ffffff;
+    --basic-light-gray : #eeeeee;
+    --basic-gray-blue : #f2f2f2;
+    --basic-desaturated-blue : #81b3d2;
+    --basic-desaturated-dark-orange : #766357;
+    --basic-Very-dark-gray: #333333;
+
+    --special: #6a6a6a;
+}
+
+/* Global*/
+
+body {
+
+}
+
