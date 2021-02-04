@@ -29,12 +29,332 @@
     --basic-desaturated-dark-orange : #766357;
     --basic-Very-dark-gray: #333333;
 
-    --special: #6a6a6a;
+    --special-gray: #6a6a6a;
+    --specia-grayish-orange: #604e43;
+    --special-desaturated-orange: #503E33;
+    --special-Very-light-gray: #ebebeb;
+    --special-border-Very-light-gray: #E5E5E5;
+    --special-light-gray: #a9a9a9;
+    --special-Slightly-desaturated-blue: #669ec0;
+    --special-Moderate-blue: #5496BD;
+    --special-Grayish-pink: #bdbbbc;
+    --special-mostly-black-red: #231F20;
+
+
 }
 
 /* Global*/
 
 body {
+    width: 1200px;
+    padding: 0;
+    margin: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-Very-dark-gray);
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main navigation*/
+
+.main-navigation {
+    font-weight: 700;
+    line-height: 26px;
+    background-color: transparent;
+}
+
+.site-navigation {
+    list-style: none;
+}
+
+.site-navigation a {
+    color: var(--basic-black);
+}
+
+.site-navigation a:hover{
+    color: var(--basic-desaturated-blue);
+}
+
+.site-navigation a:focus {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+.site-navigation a:active {
+    color: var(--basic-desaturated-dark-orange);
+}
+
+
+
+/* container */
+
+.container {
+    background-image: url(../img/background\ photo.jpg);
+    background-size: 1200px 509px;
+    background-repeat: no-repeat;
+    /*background-image: url(../img/Shape.png);
+    background-size: 1200px 57px;
+    background-position: 40px 508px;
+    background-repeat: no-repeat;*/
+}
+
+/* .container-img {
+    padding-left: 411.38px;
+    padding-top: 132.35px;
+
+} */
+
+.container-slogan {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--basic-black);
+}
+
+/* Features */
+
+.features-subtitle {
+    font-size: 21px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--basic-Very-dark-gray);
+}
+
+.list-features {
+    list-style: none;
+    text-align: center;
+}
+
+.item-features h3 {
+    font-size: 21px;
+    font-weight: bold;    
+}
+
+.features-item {
+    color: var(--basic-white);
+    background-size: 400px 256px;
+    background-color: var(--basic-desaturated-blue)
+}
+
+.features-item-row {
+    background-size: 1200px 256px;
+    background-color: var(--basic-light-gray)
+  
+}
+
+/* Recommendation */
+
+.list-recommendation {
+    list-style: none;
+    text-align: center;
+}
+
+.item-recommendation h5 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.housing {
+    background-image: url(../img/icons/icon-1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 
 }
+
+.food {
+    background-image: url(../img/icons/icon-2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.souvenirs {
+    background-image: url(../img/icons/icon-3.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Search */
+
+.search-slogan {
+    font-size: 30px;
+    line-height: 24px;
+    text-align: center;
+    color: var(--basic-black);
+    font-weight: bold;
+}
+
+.search-info {
+    line-height: 24px;
+    text-align: center;
+}
+
+/* Button */
+
+.button {
+    font: inherit;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+
+.button-form {
+    width: 568px;
+    height: 86px;
+    background-color: var(--basic-desaturated-dark-orange);
+}
+
+.button-form:hover {
+    background-color: var(--specia-grayish-orange);    
+}
+
+.button-form:focus {
+    background-color: var(--special-desaturated-orange);
+    color: rgba(255, 255, 255, .3);
+}
+
+.button-search {
+    width: 458px;
+    height: 58px;
+    background-color: var(--basic-desaturated-blue);
+}
+
+.button-search:hover {
+    background-color: var(--special-Slightly-desaturated-blue);
+}
+
+.button-search:focus {
+    background-color: var(--special-Moderate-blue);
+}
+
+.button-plus,
+.button-minus {
+    color: var(--special-light-gray);
+}
+
+.button-plus:hover,
+.button-minus:hover {
+    color: var(--basic-black);
+}
+
+.button-plus:focus,
+.button-minus:focus {
+    color: var(--basic-desaturated-blue);
+}
+
+/* Search-form */
+
+.search-form {
+    width: 568px;
+    height: 395px;
+    background: var(--basic-white);
+    box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.item-search,
+.search-item {   
+    line-height: 26px;
+    font-weight: bold;
+    vertical-align: center;
+}
+
+.item-search input,
+.search-item input {
+    font: inherit;
+    background-color: var(--basic-gray-blue);
+    border: none;
+    outline: none;
+}
+
+.item-search input:hover {
+    background-color: var(--special-Very-light-gray);
+}
+
+.item-search input:focus {
+    outline: inherit;
+    background-color: var(--basic-white);
+    border: 2px solid var(--special-border-Very-light-gray);
+}
+
+::placeholder {
+    color: var(--basic-black);
+}
+
+
+.item-search:hover path {
+    fill: var(--basic-black);
+}
+
+.item-search:focus path {
+    fill: var(--basic-desaturated-blue);
+}
+
+
+/* Main footer */
+
+.main-footer {
+    background-position: 0 0;
+    background-color: var(--basic-white);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--basic-black);
+    text-align: center;
+    line-height: 26px;
+
+}
+
+.footer-contacts {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.footer-social ul {
+    text-align: center;
+    list-style: none;
+}
+
+.social-button {
+    background-color: var(--basic-desaturated-blue);
+}
+
+.social-button:hover {
+    background-color: var(--special-Slightly-desaturated-blue);
+}
+
+.social-button:focus {
+    background-color: var(--special-Moderate-blue);
+}
+
+.social-button:focus path {
+    fill: rgba(255, 255, 255, .3);
+}
+
+.footer-copyright a {
+    list-style: none;
+}
+
+
+.footer-copyright:hover path {
+    fill: var(--basic-desaturated-blue);
+}
+
+.footer-copyright:focus path {
+    fill: var(--special-Grayish-pink);
+}
+
+
+
 
