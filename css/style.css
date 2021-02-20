@@ -57,7 +57,7 @@ body {
 	min-width: 1200px;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: auto 1fr;
 	align-content: start;
 }
 
@@ -70,6 +70,20 @@ img {
   max-width: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 /* Grid*/
 
 .page {
@@ -78,10 +92,6 @@ img {
 
 /* Main header */
 
-.main-header {
-	outline: 5px solid red;
-	outline-offset: -5px;
-}
 
 /* Main navigation*/
 
@@ -89,8 +99,9 @@ img {
 	display: grid;
   font-weight: 700;
   line-height: 26px;
-	padding: 0 72px;
+	padding: 14px 72px 16px;
 	margin: 0;
+	position: relative;
 }
 
 /* Logo */
@@ -102,12 +113,11 @@ img {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	z-index: 1;
 }
 
 .site-navigation {
-	outline: 5px solid rgba(203, 84, 137, 0.3);
-  outline-offset: -5px;
-  list-style: none;
+	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: grid;
@@ -116,15 +126,11 @@ img {
 
 }
 
-.site-navigation li:nth-child(1),
-.site-navigation li:nth-child(2) {
-	text-align: left;
-}
-
-.site-navigation li:nth-child(3), 
-.site-navigation li:nth-child(4) {
+.item-rihgt {
 	text-align: right;
 }
+	
+
 
 .site-navigation a {
   color: var(--basic-black);
@@ -151,16 +157,15 @@ img {
 .container {
 	margin: 0;
 	padding: 0;
-	display: grid;
-	
+	display: grid;	
 }
 
 .bg-main {
   background-color: var(--basic-light-gray);
   background-image: url(../img/background\ photo.jpg);
   background-size: contain;
-  background-repeat: no-repeat;	
-	height: 509px;
+  background-repeat: no-repeat;
+	position: relative;	
 }
 
 .bg-main-logo {
@@ -169,11 +174,14 @@ img {
   display: block;
 }
 
-.bg-main svg {
-	position: relative;
-	top: -56px;
+.bg-main::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 57px;
+	background-image: url(../img/Shape.svg);
+	bottom: 0;
 }
-
 
 .container-slogan {
 	font-size: 21px;
@@ -243,6 +251,14 @@ img {
 	display: inherit;
 }
 
+.item-features-revers {
+	grid-template-columns: 800px 1fr;
+}
+
+.item-features-revers .features-item-text {
+	order: 2;
+}
+
 /* Recommendation */
 
 .list-recommendation {
@@ -271,9 +287,6 @@ img {
 .item-recommendation p {
 	margin: 0;
 }
-
-
-
 
 /* Search */
 
@@ -370,13 +383,14 @@ input[type="number"]::-webkit-outer-spin-button {
   line-height: 26px;
   font-weight: bold;
   vertical-align: center;
+	position: relative;
 }
 
 .item-search input {
   font: inherit;
-  background-color: var(--basic-gray-blue);
   border: none;
   outline: none;
+	background-color: transparent;
 }
 
 .item-search input:hover {
@@ -397,6 +411,11 @@ input[type="number"]::-webkit-outer-spin-button {
   display: inline;
 }
 
+.item-search-date {
+	display: inline-block;
+	background-color: var(--basic-gray-blue);
+}
+
 .button-number,
 .input-number input {
   background-color: transparent;
@@ -404,13 +423,38 @@ input[type="number"]::-webkit-outer-spin-button {
   text-align: center;
 }
 
+.input-number input {
+	font-weight: bold;
+	outline: none;
+}
+
 .input-number {
   background-color: var(--basic-gray-blue);
   padding: 6px 13px;
-  display: inline-block;
+	position: relative;
 }
 
+.input-button-minus::before {
+	content: "";
+	position: absolute;
+	background-image: url(../img/icons/minus.svg);
+	width: 12px;
+	height: 3px;
+	left: 13px;
+	top: 50%;
+}
 
+.button-minus {
+	background-image: url(../img/icons/Union.svg);
+	width: 11px;
+	height: 11px;
+}
+
+.calendar-button {
+	border: none;
+	outline: none;
+	padding: 6px 8px;
+}
 
 
 
@@ -420,21 +464,46 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Filters */
 
+.page-search {
+	display: grid;
+	outline: 5px solid rgba(255, 0, 0, 0.7);
+  outline-offset: -5px;
+}
+
 .filters {
   color: var(--basic-white);
-  background-color: var(--basic-Very-dark-gray);
-  background-image: url(../img/background.jpg);
+	background-color: var(--basic-light-gray);
+	background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
-	background-size: contain;
-  padding: 26px 72px 32px;
+	background-size: cover;
+	padding: 26px 72px 32px;
 }
 
-.filter legend {
+.price {
+	display: grid;
+	grid-template-rows: 1fr min-content;
+}
+
+.filters-list {
+	display: grid;
+	grid-template-columns: 255px 255px 1fr;
+	grid-template-rows: 1fr min-content;
+	padding: 0;
+	margin: 0;
+}
+
+.filters-list fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+.filters-list legend {
   font-size: 16px;
   font-weight: bold;
+	list-style: none;
 }
 
-.filter ul {
+.filters-list ul {
   list-style: none;
 }
 
@@ -450,6 +519,7 @@ input[type="number"]::-webkit-outer-spin-button {
 	background-color: transparent;
 	border: 2px solid var(--basic-white);
 	padding: 8px 35px 7px 36px;
+	justify-self: center;
 }
 
 .button-filter:hover {
@@ -475,19 +545,47 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* Results */
 
+.results {
+	
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding: 30px 72px;
+	gap: 46px;
+	outline: 5px solid rgba(0, 255, 187, 0.857);
+  outline-offset: -5px;
+}
+
 .results-search {
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
 	color: var(--basic-black);
+	margin: 0;
 }
 
+
+
 /* Sorting */
+
+.sorting {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	gap: 36px;
+}
 
 .sorting-title {
 	font-size: 12px;
 	line-height: 18px;
 	color: var(--basic-black);
+	margin: 0;
+	align-self: center;
+}
+
+.sorting-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-self: start;
+	align-self: center;
 }
 
 .sorting-link {
@@ -497,6 +595,15 @@ input[type="number"]::-webkit-outer-spin-button {
 	opacity: 0.3;
 	text-decoration: underline;
 	text-decoration-style: dashed;
+}
+
+.button-sorting {
+	align-self: center;
+	justify-self: end;
+}
+
+.button-sorting svg {
+	margin-left: 12px;
 }
 
 .sorting-link:hover {
@@ -522,7 +629,6 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .button-up:focus path, 
-.button-up:active path, /* Не поняла как делать активную кнопку*/
 .button-down:focus path, 
 .button-down:active path {
 	fill: var(--basic-desaturated-blue);
@@ -536,21 +642,65 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .list-catalog {
 	list-style: none;
+	margin: 0;
+	padding: 0 72px;
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	outline: 5px solid rgba(255, 102, 0, 0.986);
+  outline-offset: -5px;
 }
 
-.item-catalog h3 {
+.item-catalog {
+	outline: 5px solid rgba(0, 255, 255, 0.7);
+  outline-offset: -5px;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas:
+		"img name stars "
+		"img subject ."
+		"img button rating" ;
+	column-gap: 29px;
+	padding: 30px 0;
+}
+
+.catalog-image {
+	grid-area: img;
+	background-color: var(--basic-gray-blue);
+}
+
+.catalog-name {
+	grid-area: name;
 	font-size: 21px;
 	line-height: 26px;
 	font-weight: bold;
 	color: var(--basic-black);
-}
-
-.item-catalog dd {
 	margin: 0;
 }
 
-.catalog-image {
-	background-color: var(--basic-gray-blue);
+.catalog-subject {
+	grid-area: subject;
+	display: grid;
+	grid-template-columns: auto auto;
+	margin: 0;
+	justify-self: start;
+	column-gap: 6px;
+}
+
+.catalog-subject dd {
+	margin: 0;
+}
+
+.catalog-subject dt {
+	width: 110px;
+}
+
+.catalog-button {
+	grid-area: button;
+	display: grid;
+	grid-template-columns: auto auto;
+	column-gap: 6px;
+	justify-self: start;
 }
 
 .button-detail {
@@ -565,12 +715,33 @@ input[type="number"]::-webkit-outer-spin-button {
 	padding: 3px 17px 3px 16px;
 }
 
+.rating {
+	grid-area: rating;
+	justify-self: right;
+	align-self: end;
+}
+
 .rating p {
 	color: var(--special-direct-energy);
 	background-color: var(--basic-gray-blue);
 	padding: 3px 12px 3px 15px;
 	display: inline-block;
+	margin: 0;
 }
+
+.stars {
+	grid-area: stars;
+	justify-self: right;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -602,6 +773,10 @@ input[type="number"]::-webkit-outer-spin-button {
 	outline: 5px solid rgba(255, 0, 0, 0.7);
   outline-offset: -5px;
 	padding: 36px 100px;
+}
+
+.footer-oposity {
+	margin-top: -120px;
 }
 
 .main-footer .container {
