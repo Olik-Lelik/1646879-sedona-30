@@ -63,11 +63,11 @@
 								<legend>Стоимость в сутки (Р):</legend>
 								<div class="range-filter">
 									<div class="price-controls">
-										<label class="min-price"> от
-											<input type="text" name="min-price" value="0"/>
+										<label class="min-price">
+											<input type="number" name="min-price" value="" placeholder="от 0"/>
 										</label>
-										<label class="max-price"> до
-											<input type="number" name="max-price" value="3000" />
+										<label class="max-price">
+											<input type="number" name="max-price" value="" placeholder=" до 3000"/>
 										</label>
 									</div>
 									<div class="range-controls">
@@ -88,25 +88,22 @@
         <p class="results-search">Найдено: 3</p>
 				<div class="sorting">
 					<p class="sorting-title">Сортировка:</p>
-					<div class="sorting-wrapper">
-						<a class="sorting-link sorting-current" href="">по цене</a> 
-						<a class="sorting-link" href="">по типу</a> 
-						<a class="sorting-link" href="">по рейтингу</a>  
-					</div>
-					<div class="button-sorting">
-						<a class="button-up" href="">
-							<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
-							</svg>
-						</a>
-						<a class="button-down button-down-current" href="">
-							<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M5.5 10L0 0H11" fill="#CACACA"/>
-							</svg>
-						</a>
-					</div>              
-					
+					<a class="sorting-link sorting-current" href="">по цене</a> 
+					<a class="sorting-link" href="">по типу</a> 
+					<a class="sorting-link" href="">по рейтингу</a>  
 				</div>
+				<div class="button-sorting">
+					<a class="button-up" href="">
+						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+						</svg>
+					</a>
+					<a class="button-down button-down-current" href="">
+						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.5 10L0 0H11" fill="#CACACA"/>
+						</svg>
+					</a>
+				</div>  
 			</section>
 			<section class="catalog">
 				<ul class="list-catalog">
