@@ -13,7 +13,7 @@
 					<a class="main-header-logo"><img src="img/logo.svg" width="138" height="70" alt="Логотип сайта Седона"></a>
 					<ul class="site-navigation">
 						<li ><a href="">Информация</a></li>
-						<li><a href="">Фото и видео</a></li>
+						<li><a href="">Фото и видео</a></li><li></li>
 						<li class="item-rihgt"><a href="">Карта штата</a></li>
 						<li class="item-rihgt site-navigation-current"><a href="catalog.html">Гостницы</a></li>
 					</ul>
@@ -28,15 +28,15 @@
 							<legend>Инфраструктура:</legend>
 							<ul>
 								<li class="filter-option filter-checkbox">
-									<input type="checkbox" name="pool" id="filter-pool" checked />
+									<input class="visually-hidden filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked />
 									<label for="filter-pool">Бассейн</label>
 								</li>
 								<li class="filter-option filter-checkbox">
-									<input type="checkbox" name="parking" id="filter-parking" disabled/> <!--Заблокировала для наглядности-->
+									<input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking" id="filter-parking" disabled /> <!--Заблокировала для наглядности-->
 									<label for="filter-parking">Парковка</label>
 								</li>
 								<li class="filter-option filter-checkbox">
-									<input type="checkbox" name="Wi-Fi" id="filter-wifi" />
+									<input class="visually-hidden filter-input-checkbox" type="checkbox" name="Wi-Fi" id="filter-wifi" />
 									<label for="filter-wifi">Wi - Fi</label>
 								</li>
 							</ul>
@@ -45,32 +45,38 @@
 							<legend>Тип жилья:</legend>
 							<ul>
 								<li class="filter-option filter-checkbox">
-									<input type="checkbox" name="hotel" id="filter-hotel" checked disabled/>
+									<input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked disabled />
 									<label for="filter-hotel">Гостиница</label>
 								</li>
 								<li class="filter-option filter-checkbox">
-									<input type="checkbox" name="motel" id="filter-motel" checked />
+									<input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked />
 									<label for="filter-motel">Мотель</label>
 								</li>
 								<li class="filter-option filter-checkbox">
-									<input type="checkbox" name="apartments" id="filter-apartments" checked/>
+									<input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked/>
 									<label for="filter-apartments">Апартаменты</label>
 								</li>
 							</ul>
 						</fieldset>
 						<div class="price">
-							<fieldset>
+							<fieldset class="filter-price">
 								<legend>Стоимость в сутки (Р):</legend>
-								<div class="filter-price">
-									<label>от
-										<input class="price-number" type="number" name="price-from" min="0" max="3000" value="0"/>
-									</label>
-									<label>до
-										<input class="price-number" type="number" min="0" max="3000" name="price-to" value="3000"/>
-									</label>
-								</div>
-								<div class="filter-range">
-									<input type="range" id="filter-price" name="cowbell" />
+								<div class="range-filter">
+									<div class="price-controls">
+										<label class="min-price">
+											<input type="number" name="min-price" value="" placeholder="от 0"/>
+										</label>
+										<label class="max-price">
+											<input type="number" name="max-price" value="" placeholder=" до 3000"/>
+										</label>
+									</div>
+									<div class="range-controls">
+										<div class="scale">
+											<div class="bar" style="width: 78%; margin-left: 0%;"></div>
+										</div>
+										<div class="toggle toggle-min" tabindex="0" style="left: 0%;"></div>
+            				<div class="toggle toggle-max" tabindex="0" style="left: 78%;"></div>
+									</div>
 								</div>
 							</fieldset>
 							<button class="button button-filter" type="submit">Показать</button>
@@ -82,25 +88,22 @@
         <p class="results-search">Найдено: 3</p>
 				<div class="sorting">
 					<p class="sorting-title">Сортировка:</p>
-					<div class="sorting-wrapper">
-						<a class="sorting-link sorting-current" href="">по цене</a> 
-						<a class="sorting-link" href="">по типу</a> 
-						<a class="sorting-link" href="">по рейтингу</a>  
-					</div>
-					<div class="button-sorting">
-						<a class="button-up" href="">
-							<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
-							</svg>
-						</a>
-						<a class="button-down button-down-current" href="">
-							<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M5.5 10L0 0H11" fill="#CACACA"/>
-							</svg>
-						</a>
-					</div>              
-					
+					<a class="sorting-link sorting-current" href="">по цене</a> 
+					<a class="sorting-link" href="">по типу</a> 
+					<a class="sorting-link" href="">по рейтингу</a>  
 				</div>
+				<div class="button-sorting">
+					<a class="button-up" href="">
+						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+						</svg>
+					</a>
+					<a class="button-down button-down-current" href="">
+						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.5 10L0 0H11" fill="#CACACA"/>
+						</svg>
+					</a>
+				</div>  
 			</section>
 			<section class="catalog">
 				<ul class="list-catalog">
@@ -108,7 +111,7 @@
 						<h3 class="catalog-name">Amara Resort & Spa</h3>
 						<img class="catalog-image" src="img/hotel Amara.jpg" width="135" height="90" alt="Вид гостиницы Amara Resort & Spa"/>
 						<dl class="catalog-subject">
-							<dt>Гостиницы  bnmkjhgfdsdfghjklkjhg</dt>
+							<dt>Гостиницы</dt>
 							<dd>от 4000 р.</dd>
 						</dl>
 						<div class="catalog-button">
@@ -188,24 +191,27 @@
     <footer class="main-footer">
       <div class="container">
 				<section class="footer-contacts">
-					<h2>Контакты</h2>
-					<p>#VISITSEDONA</p>
+					<h2 class="visually-hidden">Контакты</h2>
+					<p class="contact">#VISITSEDONA</p>
 					<P>Тел: +7(495)666-01-66</P> 
 				</section>
 				<section class="footer-social">
-					<h2>Социальные сети</h2>
+					<h2 class="visually-hidden">Социальные сети</h2>
 					<ul>
-						<li><a class="social-button" href="#">twitter
+						<li><a class="social-button" href="#">
+							<span class="visually-hidden">twitter</span>
 							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
 							</svg>
 						</a></li>
-						<li><a class="social-button" href="#">facebook
+						<li><a class="social-button" href="#">
+							<span class="visually-hidden">facebook</span>
 							<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
 							</svg>
 						</a></li>
-						<li><a class="social-button" href="#">youtube
+						<li><a class="social-button" href="#">
+							<span class="visually-hidden">youtube</span>
 							<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
 							</svg>
