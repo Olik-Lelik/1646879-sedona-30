@@ -43,7 +43,7 @@ if (child) {
 formPopup.addEventListener('submit', function(evt) {
 	if (!dateArrival.value || !dateDeparture.value) {
 		evt.preventDefault();
-		alert('А где дата?');
+		alert('А где даты?');
 	} else {
 		if (isStorageSupport) {
 			localStorage.setItem("number-adult", adultNumber.value);

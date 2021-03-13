@@ -1,5 +1,5 @@
 /*Fonts*/
-/*не уверена что правильно подключила fonts.googl поэтому еще здесь подключаю*/
+
 @font-face {
   font-family: "PT Sans";
   src: url(../fonts/PTSans.woff2) format(.woff2);
@@ -663,8 +663,8 @@ input[type="number"]:focus {
 	100% {
 		transform: translateY(0);
 	}
-
 }
+
 
 
 
