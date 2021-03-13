@@ -41,8 +41,9 @@ if (child) {
 });
 
 formPopup.addEventListener('submit', function(evt) {
-	if (!dateArrival || !dateField) {
+	if (!dateArrival.value || !dateDeparture.value) {
 		evt.preventDefault();
+		alert('А где дата?');
 	} else {
 		if (isStorageSupport) {
 			localStorage.setItem("number-adult", adultNumber.value);
