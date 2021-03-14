@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"> <!--не уверна что правильно подключила шрифт
     В примере Барбершопа в ссылке прописана кириллица и латиница. Их руками вводить надо?-->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/icons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/icons/180.png" >
@@ -56,7 +56,7 @@
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M37.656 34.7929C33.376 34.7929 29.906 31.3409 29.906 27.0799C29.906 22.8209 33.375 19.3669 37.656 19.3669C41.935 19.3669 45.406 22.8209 45.406 27.0799C45.406 31.3409 41.935 34.7929 37.656 34.7929ZM42.625 27.0799C42.625 24.3489 40.4 22.1349 37.656 22.1349C34.911 22.1349 32.686 24.3489 32.686 27.0799C32.686 29.8119 34.91 32.0279 37.656 32.0279C40.4 32.0279 42.625 29.8119 42.625 27.0799ZM17.061 41.2099H20.061V45.1289H17.061V41.2099ZM25.999 41.2099H22.999V45.1289H25.999V41.2099ZM17.061 47.1819H20.061V51.1009H17.061V47.1819ZM25.999 47.1819H22.999V51.1009H25.999V47.1819ZM48.998 41.2099H51.998V45.1289H48.998V41.2099ZM57.936 41.2099H54.936V45.1289H57.936V41.2099ZM48.998 47.1819H51.998V51.1009H48.998V47.1819ZM57.936 47.1819H54.936V51.1009H57.936V47.1819Z" fill="#81B3D2"/>
                   </svg>
                   <h5>Жильё</h5>
-                  <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+                  <p>Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
                 </li>
                 <li class="item-recommendation food">
                   <svg width="75" height="70" viewBox="0 0 75 70" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M61.097 23.501H36.312C50.125 16.602 51.229 12.25 50.72 9.816C49.558 5.853 45.028 2.793 40.718 4.409C35.149 6.498 33.581 14.797 32.074 20.796C30.15 14.726 28.29 6.982 23.938 3.059C22.677 1.921 20.843 0.794999 18.175 1.031C14.149 1.387 8.373 6.413 10.717 12.012C12.968 17.39 20.404 20.789 25.295 23.501H2.879C1.29355 23.5026 0.00715075 24.7846 0 26.37V37.692C0.00715075 39.2774 1.29355 40.5594 2.879 40.561H3.153V77H60.994V40.561H61.097C62.6828 40.5599 63.9698 39.2778 63.977 37.692V26.37C63.9698 24.7842 62.6828 23.5021 61.097 23.501ZM42.413 6.944C44.516 6.634 47.395 8.243 47.668 10.153C48.061 12.909 44.268 15.408 42.582 16.574C40.059 18.318 37.654 19.217 35.295 20.629C36.179 16.939 37.844 7.618 42.413 6.944ZM19.531 16.912C17.306 15.427 12.987 12.481 13.091 9.141C13.203 5.546 18.834 2.571 21.905 5.255C25.761 8.626 27.618 16.36 29.024 21.812C25.775 20.273 22.696 19.024 19.531 16.912ZM25.503 74.026H6.136V40.561H25.504V74.026H25.503ZM25.503 37.524H3.046V26.538H25.503V37.524ZM35.66 37.524V74.027H28.486V26.538H35.66V37.524ZM58.011 74.026H38.644V40.561H58.011V74.026ZM60.931 37.524H38.644V26.538H60.931V37.524Z" fill="#81B3D2"/>
                   </svg>
                   <h5>Сувениры</h5>
-                  <p>Не только китайского, но и местного производства!</p>
+                  <p>Не только китайского, но и местного<br> производства!</p>
                 </li>
               </ul>
             </section>
@@ -94,7 +94,7 @@
 						<li>
               <h3>Небольшая<br>площадь</h3>
               <p class="features-text-number">— №3 —</p>
-              <p>Все достопримечательности находятся очень близко</p>
+              <p>Все достопримечательности<br> находятся очень близко</p>
 						</li>
 						<li>
               <h3>Красивая<br>дорога </h3>
@@ -114,56 +114,56 @@
         <p class="search-slogan">Заинтересовались?</p>
         <p class="search-info">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				<div class="search-form-wrapper">
-					<a href="#form-popup" class="button button-form button-link" type="button">Поиск гостиницы в Седоне</a>
+					<a href="#form-popup" class="button button-form button-link" >Поиск гостиницы в Седоне</a>
 					<div class="popup-wrapper">
-						<form class="search-form popup" action="https://echo.htmlacademy.ru" method="POST" id="form-popup">
+						<form class="search-form popup" action="https://echo.htmlacademy.ru" method="POST" id="form-popup" target="_blank">
 							<div class="item-search">
 								<label for="date-arrival" >Дата заезда:</label>
 								<div class="item-search-date">
 									<input class="date-arrival" type="text" name="arrival-date" id="date-arrival" value="" placeholder="24 апреля 2017" >
-									<button class="calendar-button" href="#" aria-label="календарь">
-										<svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<a class="button calendar-button" href="#" aria-label="Календарь дата заезда">
+										<svg aria-hidden="true" focusable="false" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9"/>
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z" fill="#A9A9A9"/>
 										</svg>
-									</button> 
+									</a> 
 								</div>
 							</div>
 							<div class="item-search item-search-field">
 								<label for="date-field">Дата выезда:</label>
 								<div class="item-search-date">
-									<input class="date-departure" type="text" name="departure-date" id="date-field" value="" placeholder="4 июля 2017">
-									<button class="calendar-button" href="#" aria-label="календарь">
-										<svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<input class="date-departure" type="text" name="departure-date" id="date-field" value="" placeholder="4 июля 2017" >
+									<a class="button calendar-button" href="#" aria-label="Календарь дата выезда">
+										<svg aria-hidden="true" focusable="false" width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" fill="#A9A9A9"/>
 											<path fill-rule="evenodd" clip-rule="evenodd" d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z" fill="#A9A9A9"/>
 										</svg>
-									</button> 
+									</a> 
 								</div>
 							</div>
 							<div class="search-item-wrapper">
 								<div class="search-item">
-									<p>Взрослые:</p>
+									<label class="adults" for="adult-number">Взрослые:</label>
 									<div class="input-number">
-										<button class="button-number button-minus " type="button" aria-label="минус один"></button>
+										<button class="button-number button-minus " type="button" aria-label="кнопка минус один взрослый"></button>
 										<label>
-										<input  type="number" name="adult-number" min="1" max="20" value="2">
+										<input  type="number" name="adult-number" id="adult-number" min="1" max="20" value="2">
 										</label>
-										<button class="button-number button-plus" type="button" aria-label="плюс один"></button>
+										<button class="button-number button-plus" type="button" aria-label="кнопка плюс один взрослый"></button>
 									</div>
 								</div>
 								<div class="search-item">
-									<p>Дети:</p>
+									<label class="childs" for="child-number">Дети:</label>
 									<div class="input-number">
-										<button class="button-number button-minus" type="button"></button>
+										<button class="button-number button-minus" type="button" aria-label="кнопка минус один ребенок"></button>
 										<label>            
-										<input type="number" name="child-number" min="0" max="20" value="0">            
+										<input type="number" name="child-number" id="child-number" min="0" max="20" value="0">            
 										</label>
-										<button class="button-number button-plus" type="button"></button>
+										<button class="button-number button-plus" type="button" aria-label="кнопка плюс один ребенок"></button>
 									</div>            
 								</div>
 							</div>
-							<button class="button button-search" type="submit">Найти</button>
+							<button class="button button-search" type="submit" aria-label="Найти гостинницу в Седоне">Найти</button>
 						</form>
 					</div>
 				</div>
@@ -186,19 +186,19 @@
 					<ul>
 						<li><a class="social-button" href="#">
 							<span class="visually-hidden">twitter</span>
-							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg aria-hidden="true" focusable="false" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
 							</svg>
 						</a></li>
 						<li><a class="social-button" href="#">
 							<span class="visually-hidden">facebook</span>
-							<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg aria-hidden="true" focusable="false" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
 							</svg>
 						</a></li>
 						<li><a class="social-button" href="#">
 							<span class="visually-hidden">youtube</span>
-							<svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<svg aria-hidden="true" focusable="false" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
 							</svg>
 						</a></li>
@@ -216,6 +216,6 @@
       
     </footer>
 	</div>
-	<script src="./js/form.js"></script>
+	<script src="js/form.min.js"></script>
   </body>
 </html>
