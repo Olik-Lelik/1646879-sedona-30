@@ -101,7 +101,7 @@ p {
 }
 
 .page-bg {
-	background-color: #f2f2f2;
+	background-color: var(--basic-gray-blue);
 }
 
 /* Main header */
@@ -184,8 +184,7 @@ p {
 
 .bg-main {
   background-color: var(--basic-light-gray);
-  background-image: url(../img/background\ photo.jpg);
-  background-size: cover;
+  background-image: url(../img/background_photo.jpg);
   background-repeat: no-repeat;
 	position: relative;	
 }
@@ -611,7 +610,7 @@ input[type="number"]:focus {
 .item-search-date input:focus {
   outline: none;
   background-color: var(--basic-white);
-  border: 2px solid var(--special-border-Very-light-gray);
+  outline: 2px solid var(--special-border-Very-light-gray);
 }
 
 ::-webkit-input-placeholder {color: var(--basic-black);
@@ -671,7 +670,7 @@ input[type="number"]:focus {
 
 .filters {
   color: var(--basic-white);
-	background-color: var(--basic-light-gray);
+	background-color: var(--special-gray);
 	background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
 	background-size: cover;
@@ -1106,6 +1105,7 @@ input[type="number"]:focus {
 	padding: 3px 12px 3px 15px;
 	display: inline-block;
 	margin: 0;
+	vertical-align: top;
 }
 
 .stars {
